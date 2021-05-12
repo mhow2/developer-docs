@@ -10,8 +10,10 @@ Gets all of the users in the system and their information, the result is only li
 
 | Argument | Example | Required | Description |
 | :--- | :--- | :--- | :--- |
-| `fields` | `{ name: 1, emails: 0 }` | Optional | Field include hash \(value of `1` to include, `0` to exclude\). |
+| `fields` | `{ name: 1, emails: 0 }` | Optional | Field include/exclude hash \(value of `1` to include, `0` to exclude\).|
 | `query` | `{ active: true, type: { $in: ['user', 'bot'] } }` | Optional | Query filter hash. |
+
+Notice that some fields are included by default in the result, regardless of the `fields` requested for include : `name`, `username`, `emails`, `roles`, `status`, `active`, `avatarETag`.
 
 ## Other Users Example Call
 
